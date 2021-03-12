@@ -1,6 +1,8 @@
-var paliUser = prompt('Inserisci un palindromo: ');
+// palindromo
 
-function paliTest(pali1) {
+// var paliUser = prompt('Inserisci un palindromo: ');
+
+function paliEx(pali1) {
   var pali2 = [];
   var temp;
   for (var x = pali1.length - 1; x >= 0 ; x--) {
@@ -16,4 +18,39 @@ function paliTest(pali1) {
   }
 }
 
-console.log(paliTest(paliUser));
+// console.log(paliEx(paliUser));
+
+
+
+
+
+// numeri casuali
+
+var parOddUser = prompt('Scegli "pari" o "dispari": ');
+var numUser = parseInt(prompt('Inserisci un numero da 1 a 5: '));
+
+if (numUser > 5) {
+  alert('eeeeeeeeeeeeeeeeeh volevi!!!');
+} else {
+  function numRnd() {
+    var numPc = Math.floor(Math.random() * 5) + 1;
+    return numPc;
+  }
+
+  var sum = numRnd() + numUser;
+
+  function mach(){
+
+    if (parOddUser == 'pari' && sum % 2 == 0) {
+      return 'Hai vinto ' + sum;
+    } else if (parOddUser == 'dispari' && sum % 2 == 1) {
+      return 'Hai vinto ' + sum;
+    } else {
+      return 'Hai perso ' + sum;
+    }
+
+  }
+
+  console.log(mach());
+  
+}
