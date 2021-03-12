@@ -29,7 +29,7 @@ function paliEx(pali1) {
 var parOddUser = prompt('Scegli "pari" o "dispari": ');
 var numUser = parseInt(prompt('Inserisci un numero da 1 a 5: '));
 
-if (numUser > 5) {
+if (numUser > 5 || numUser < 0) {
   alert('eeeeeeeeeeeeeeeeeh volevi!!!');
 } else {
   function numRnd() {
@@ -52,5 +52,5 @@ if (numUser > 5) {
   }
 
   console.log(mach());
-  
+
 }
